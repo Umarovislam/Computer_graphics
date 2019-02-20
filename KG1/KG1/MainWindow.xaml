@@ -18,22 +18,22 @@
 
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Rectangle Name="MRectangle"  Grid.Column="0" Grid.Row="0" Margin="20"></Rectangle>
+                <Rectangle Name="MRectangle" Fill="Aqua" Grid.Column="0" Grid.Row="0" Margin="20"></Rectangle>
                 <StackPanel Grid.Column="1" Grid.Row="0">
                     <Label FontSize="30"> Input Color</Label>
                     <TextBox FontSize="20" Width="100" Margin="-150 0 0 0"></TextBox>
                 </StackPanel>
                 <!--RGB Sliders-->
                 <Label Grid.Column="0" Grid.Row="1" Margin="40 0" FontSize="30">RGB</Label>
-                <Slider Name="SliderR" SmallChange="0" LargeChange="255" ValueChanged="SliderR_OnValueChanged" Grid.Column="0" Grid.Row="1" Margin="5 40 5 0"/>
-                <Slider Name="SliderG" SmallChange="0" LargeChange="255" ValueChanged="SliderG_OnValueChanged" Grid.Column="0" Grid.Row="1" Margin="5 80 5 0"/>
-                <Slider Name="SliderB" SmallChange="0" LargeChange="255" ValueChanged="SliderB_OnValueChanged" Grid.Column="0" Grid.Row="1" Margin="5 120 5 0"/>
+                <Slider Name="SliderR" SmallChange="1" LargeChange="10" Maximum="255" Minimum="0" ValueChanged="SliderR_OnValueChanged" Grid.Column="0" Grid.Row="1" Margin="5 40 5 0"/>
+                <Slider Name="SliderG" SmallChange="1" LargeChange="10" Maximum="255" Minimum="0" ValueChanged="SliderG_OnValueChanged" Grid.Column="0" Grid.Row="1" Margin="5 80 5 0"/>
+                <Slider Name="SliderB" SmallChange="1" LargeChange="10" Maximum="255" Minimum="0" ValueChanged="SliderB_OnValueChanged" Grid.Column="0" Grid.Row="1" Margin="5 120 5 0"/>
 
                 <!-- XYZ Sliders-->
                 <Label Grid.Column="1" Grid.Row="1" Margin="40 0" FontSize="30">XYZ</Label>
-                <Slider Name="XSlider" ValueChanged="XSlider_OnValueChanged"  Grid.Column="1" Grid.Row="1" Margin="5 40 5 0"/>
-                <Slider Name="YSlider"  Grid.Column="1" Grid.Row="1" Margin="5 80 5 0"/>
-                <Slider Name="ZSlider"  Grid.Column="1" Grid.Row="1" Margin="5 120 5 0"/>
+                <Slider Name="XSlider" ValueChanged="XSlider_OnValueChanged" SmallChange="0.1" LargeChange="1" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 40 5 0"/>
+                <Slider Name="YSlider" ValueChanged="YSlider_ValueChanged"  Grid.Column="1" Grid.Row="1" SmallChange="0.1" LargeChange="10" Maximum="100" Minimum="0" Margin="5 80 5 0"/>
+                <Slider Name="ZSlider" SmallChange="0.1" LargeChange="10" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 120 5 0"/>
 
                 <!-- CMYK Sliders-->
                 <Label Grid.Column="0" Grid.Row="2" Margin="40 0" FontSize="30">CMYK</Label>
