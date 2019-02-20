@@ -1,0 +1,14 @@
+C:\Users\Islam\source\repos\KG1\KG1\bin\Debug\KG1.exe.config
+C:\Users\Islam\source\repos\KG1\KG1\bin\Debug\KG1.exe
+C:\Users\Islam\source\repos\KG1\KG1\bin\Debug\KG1.pdb
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1.csprojAssemblyReference.cache
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\MainWindow.g.cs
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\App.g.cs
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1_MarkupCompile.cache
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\MainWindow.baml
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1.g.resources
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1.Properties.Resources.resources
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1.csproj.GenerateResource.cache
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1.csproj.CoreCompileInputs.cache
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1.exe
+C:\Users\Islam\source\repos\KG1\KG1\obj\Debug\KG1.pdb
