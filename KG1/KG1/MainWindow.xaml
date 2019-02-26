@@ -1,4 +1,4 @@
-﻿<Window x:Class="KG1.MainWindow"
+﻿                <Window x:Class="KG1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -20,7 +20,7 @@
                 </Grid.RowDefinitions>
                 <Rectangle Name="MRectangle" Fill="Aqua" Grid.Column="0" Grid.Row="0" Margin="20"></Rectangle>
                 <StackPanel Grid.Column="1" Grid.Row="0">
-                    <Label FontSize="30"> Input Color</Label>
+                    <Label FontSize="30"> Input</Label>
                     <TextBox FontSize="20" Width="100" Margin="-150 0 0 0"></TextBox>
                 </StackPanel>
                 <!--RGB Sliders-->
@@ -33,13 +33,14 @@
                 <Label Grid.Column="1" Grid.Row="1" Margin="40 0" FontSize="30">XYZ</Label>
                 <Slider Name="XSlider" ValueChanged="XSlider_OnValueChanged" SmallChange="0.1" LargeChange="1" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 40 5 0"/>
                 <Slider Name="YSlider" ValueChanged="YSlider_ValueChanged"  Grid.Column="1" Grid.Row="1" SmallChange="0.1" LargeChange="10" Maximum="100" Minimum="0" Margin="5 80 5 0"/>
-                <Slider Name="ZSlider" SmallChange="0.1" LargeChange="10" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 120 5 0"/>
+                <Slider Name="ZSlider" ValueChanged="ZSlider_ValueChanged" SmallChange="0.1" LargeChange="10" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 120 5 0"/>
 
                 <!-- CMYK Sliders-->
-                <Label Grid.Column="0" Grid.Row="2" Margin="40 0" FontSize="30">CMYK</Label>
-                <Slider Grid.Column="0" Grid.Row="2" Margin="5 40 5 0"/>
-                <Slider Grid.Column="0" Grid.Row="2" Margin="5 80 5 0"/>
-                <Slider Grid.Column="0" Grid.Row="2" Margin="5 120 5 0"/>
+                <Label Grid.Column="0" Grid.Row="2" Margin="3 0" FontSize="30">CMYK</Label>
+                <Slider Name="CSlider" ValueChanged="CSlider_ValueChanged" SmallChange="0.1" Maximum="1" Minimum="0" Grid.Column="0" Grid.Row="2" Margin="5,40,5,10"/>
+                <Slider Name="MSlider" ValueChanged="MSlider_ValueChanged" Maximum="1" Minimum="0" SmallChange="0.1" Grid.Column="0" Grid.Row="2" Margin="5 80 5 0"/>
+                <Slider Name="Y2Slider" ValueChanged="Y2Slider_ValueChanged" Maximum="1" Minimum="0" SmallChange="0.1" Grid.Column="0" Grid.Row="2" Margin="5,135,10,13"/>
+                <Slider Name="KSlider" ValueChanged="KSlider_ValueChanged" Maximum="1" Minimum="0" SmallChange="0.1" Grid.Column="0" Grid.Row="2" Margin="5,107,10,53"/>
 
                 <!-- Politra-->
                 <Grid Grid.Column="1" Row="2">
