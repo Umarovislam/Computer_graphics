@@ -34,9 +34,9 @@ namespace KG1
         private void Rect_Change()// byte R, byte G, byte B)
         {
             MRectangle.Fill = new SolidColorBrush(Color.FromRgb(R, G, B));
-            XSlider.Value = this.X;
-            YSlider.Value = this.Y;
-            ZSlider.Value = this.Z;
+            
+            
+
         }
 
         private void RGB_to_XYZ()
@@ -63,6 +63,10 @@ namespace KG1
             this.Y = r * 0.2126 + g * 0.7152 + b * 0.0722;
             this.Z = r * 0.0193 + g * 0.1192 + b * 0.9505;
 
+
+            XSlider.Value = this.X;
+            YSlider.Value = this.Y;
+            ZSlider.Value = this.Z;
         }
 
         private void XYZ_to_RGB()
@@ -130,14 +134,16 @@ namespace KG1
             var g = this.G / 255.0;
             var b = this.B / 255.0;
             this.K = 1 - Math.Max(r, Math.Max(g, b));
-            this.C = (1 - r - K) / (1 - K);
-            this.M = (1 - g - K) / (1 - K);
+            this.C = (1 - r - this.K) / (1 - this.K);
+            this.M = (1 - g - this.K) / (1 - this.K);
             //Y = (1-B'-K) / (1-K)
-            this.Y2 = (1 - b - K) / (1 - K);
+            this.Y2 = (1 - b - this.K) / (1 - this.K);
+
             KSlider.Value = this.K;
             MSlider.Value = this.M;
             CSlider.Value = this.C;
             Y2Slider.Value = this.Y2;
+
         }
         private void YSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -163,6 +169,67 @@ namespace KG1
             CMYK_to_RGB();
             Rect_Change();
         }
+
+        private void BtRed_Click(object sender, RoutedEventArgs e)
+        {
+            this.R = 255;
+            this.G = 0;
+            this.B = 0;
+            Rect_Change();
+        }
+
+        private void BtYellow_Click(object sender, RoutedEventArgs e)
+        {
+            this.R = 255;
+            this.G = 255;
+            Rect_Change();  
+
+        }
+
+        private void TbGreen_Click(object sender, RoutedEventArgs e)
+        {
+            this.R = 0;
+            this.B = 0;
+            this.G = 255;
+            Rect_Change();
+
+        }
+
+        private void BtBlue_Click(object sender, RoutedEventArgs e)
+        {
+            this.R = 0;
+            this.B = 255;
+            this.G = 0;
+            Rect_Change();
+            
+        }
+
+        private void BtPurple_Click(object sender, RoutedEventArgs e)
+        {
+            this.R = 150;
+            this.B = 100;
+            this.G = 0;
+            Rect_Change();
+
+        }
+
+        private void BtGray_Click(object sender, RoutedEventArgs e)
+        {
+            this.R = 150;
+            this.B = 150;
+            this.G = 150;
+            Rect_Change();
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = tbHex as TextBox;
+            String s = tb.Text;
+            MRectangle.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString(s));
+
+        }
+        
 
         private void MSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -201,9 +268,10 @@ namespace KG1
             var slider = sender as Slider;
             byte r = (byte)slider.Value;
             this.R = r;
-            Rect_Change();
             RGB_to_XYZ();
             RGB_to_CMYK();
+
+            Rect_Change();
         }
 
         private void SliderG_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -213,8 +281,9 @@ namespace KG1
             byte g = (byte)slider.Value;
             this.G = g;
             RGB_to_XYZ();
-            Rect_Change();
             RGB_to_CMYK();
+
+            Rect_Change();
         }
 
         private void SliderB_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -223,8 +292,9 @@ namespace KG1
             byte b = (byte)slider.Value;
             this.B = b;
             RGB_to_XYZ();
-            Rect_Change();
             RGB_to_CMYK();
+
+            Rect_Change();
         }
         private void XSlider_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
