@@ -130,35 +130,58 @@ namespace KG1
         }
         private void RGB_to_CMYK()
         {
+            
             var r = this.R / 255.0;
             var g = this.G / 255.0;
             var b = this.B / 255.0;
+            if (r == 0 || g == 0 || b == 0)
+                return;
             this.K = 1 - Math.Max(r, Math.Max(g, b));
             this.C = (1 - r - this.K) / (1 - this.K);
             this.M = (1 - g - this.K) / (1 - this.K);
             //Y = (1-B'-K) / (1-K)
             this.Y2 = (1 - b - this.K) / (1 - this.K);
-
             KSlider.Value = this.K;
-            MSlider.Value = this.M;
             CSlider.Value = this.C;
             Y2Slider.Value = this.Y2;
-
+            MSlider.Value = this.M;
+        }
+        private void XSlider_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (this.rg)
+                return;
+            this.ts = true;
+            var slider = sender as Slider;
+            this.X = slider.Value;
+            XYZ_to_RGB();
+            RGB_to_CMYK();
+            Rect_Change();
+            this.ts = false;
         }
         private void YSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            if (this.rg)
+                return;
+            this.ts = true;
             var slider = sender as Slider;
             this.Y = slider.Value;
             XYZ_to_RGB();
+            RGB_to_CMYK();
             Rect_Change();
+            this.ts = false;
         }
 
         private void ZSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            if (this.rg)
+                return;
+            this.ts = true;
             var slider = sender as Slider;
             this.Z = slider.Value;
             XYZ_to_RGB();
+            RGB_to_CMYK();
             Rect_Change();
+            this.ts = false;
 
         }
 
@@ -264,45 +287,43 @@ namespace KG1
         /// <param name="e">changed detector</param>
         private void SliderR_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-           
+            if (this.ts)
+                return;
+
+            this.rg = true;
             var slider = sender as Slider;
             byte r = (byte)slider.Value;
             this.R = r;
             RGB_to_XYZ();
-            RGB_to_CMYK();
-
             Rect_Change();
+            this.rg = false;
         }
 
         private void SliderG_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            
+            if (this.ts)
+                return;
+            this.rg = true;
             var slider = sender as Slider;
             byte g = (byte)slider.Value;
             this.G = g;
             RGB_to_XYZ();
-            RGB_to_CMYK();
-
+       
             Rect_Change();
+            this.rg = false;
         }
 
         private void SliderB_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            if (this.ts)
+                return;
+            this.rg = true;
             var slider = sender as Slider;
             byte b = (byte)slider.Value;
             this.B = b;
             RGB_to_XYZ();
-            RGB_to_CMYK();
-
             Rect_Change();
-        }
-        private void XSlider_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            var slider = sender as Slider;
-            this.X = slider.Value;
-            XYZ_to_RGB();
-            Rect_Change();
-            
+            this.rg = false;
         }
     }
 }

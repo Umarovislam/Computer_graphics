@@ -21,9 +21,10 @@
                 <Rectangle Name="MRectangle" Fill="Aqua" Grid.Column="0" Grid.Row="0" Margin="20"></Rectangle>
                 <StackPanel Grid.Column="1" Grid.Row="0">
                     <Label FontSize="30" >Input</Label>
-                    <TextBox x:Name="tbHex" FontSize="20" Width="90" Margin="98,0"/>
-                    <Button Width="40" RenderTransformOrigin="0.875,-0.367" Content="Show" Margin="123,0" Click="Button_Click"/>
-                    
+                    <TextBox x:Name="tbHex" FontSize="20" Margin="76,0,117,0"/>
+                    <!--#region -->
+                    <Button Width="40" RenderTransformOrigin="0.875,-0.367" Content="Show" Margin="117,12,129,0" Click="Button_Click" Background="#FF379365"/>
+
                 </StackPanel>
                 <!--RGB Sliders-->
                 <Label Grid.Column="0" Grid.Row="1" Margin="40 0" FontSize="30">RGB</Label>
@@ -33,7 +34,7 @@
 
                 <!-- XYZ Sliders-->
                 <Label Grid.Column="1" Grid.Row="1" Margin="40 0" FontSize="30">XYZ</Label>
-                <Slider Name="XSlider" ValueChanged="XSlider_OnValueChanged" SmallChange="0.1" LargeChange="1" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 40 5 0"/>
+                <Slider Name="XSlider"  ValueChanged="XSlider_OnValueChanged"  SmallChange="0.1" LargeChange="1" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 40 5 0"/>
                 <Slider Name="YSlider" ValueChanged="YSlider_ValueChanged"  Grid.Column="1" Grid.Row="1" SmallChange="0.1" LargeChange="10" Maximum="100" Minimum="0" Margin="5 80 5 0"/>
                 <Slider Name="ZSlider" ValueChanged="ZSlider_ValueChanged" SmallChange="0.1" LargeChange="10" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" Margin="5 120 5 0"/>
 
