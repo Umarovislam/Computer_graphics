@@ -1,0 +1,15 @@
+D:\Computer_graphics\KG3\KG3\bin\Debug\KG3.exe.config
+D:\Computer_graphics\KG3\KG3\bin\Debug\KG3.exe
+D:\Computer_graphics\KG3\KG3\bin\Debug\KG3.pdb
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3.csprojAssemblyReference.cache
+D:\Computer_graphics\KG3\KG3\obj\Debug\MainWindow.g.cs
+D:\Computer_graphics\KG3\KG3\obj\Debug\App.g.cs
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3_MarkupCompile.cache
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3_MarkupCompile.lref
+D:\Computer_graphics\KG3\KG3\obj\Debug\MainWindow.baml
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3.g.resources
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3.Properties.Resources.resources
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3.csproj.GenerateResource.cache
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3.csproj.CoreCompileInputs.cache
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3.exe
+D:\Computer_graphics\KG3\KG3\obj\Debug\KG3.pdb
