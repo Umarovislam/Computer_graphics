@@ -17,7 +17,7 @@
 * [Базовые растровые алгоритмы](https://github.com/Umarovislam/Computer_graphics/tree/master/Lab4/Rasterization)
 * [Алгоритмы отсечения отрезкови многоугольников: Алгоритм Сазерленда-Коэна](https://github.com/Umarovislam/Computer_graphics/tree/master/KG5)
 * [Построение и визуализация трехмерных объектов. Трехмерное  изображение первой буквы фамилии.](https://github.com/Umarovislam/Computer_graphics/tree/master/KG6)
-* [Алгоритм отсечения выпуклого многоугольника]()
+* [Алгоритм отсечения выпуклого многоугольника](https://github.com/Umarovislam/Computer_graphics/blob/master/KG5/KG5.ipynb)
 
 
 
